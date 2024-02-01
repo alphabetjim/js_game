@@ -1,0 +1,22 @@
+rules > td {
+    text-align: center;
+}
+
+.game-button {
+    text-align: center;
+    font-weight: 400;
+}
+
+.titleContainer {
+    text-align: center;
+}
+
+.game-button {
+    background-color: orange;
+    border: 1px solid darkorange;
+    width: 30%;
+}
+
+.row {
+    height: 20vh;
+}
