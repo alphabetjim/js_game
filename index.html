@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Game</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
@@ -14,7 +15,7 @@
     </div>
     <div class="rules">
         <h2>Rules</h2>
-        <table class="rules">
+        <table class="rules table-bordered">
             <tr>
                 <th>Selection</th>
                 <th>Beats</th>
@@ -38,8 +39,21 @@
         </table>
     </div>
     <div class="game">
-        <h2 class="game-heading">Make your choice:</h2>
-        <div class="row buttons">
+        <div class="gameSetup">
+            <h2 class="game-heading">Make your choice:</h2>
+            <div class="buttons">
+                <div class="game-button" id="rockIcon">
+                    Rock <i class="fa-regular fa-gem"></i>
+                </div>
+                <div class="game-button" id ="paperIcon">
+                    Paper <i class="fa-regular fa-paper-plane"></i>
+                </div>
+                <div class="game-button" id="scissorsIcon">
+                    Scissors <i class="fa-solid fa-scissors"></i>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row buttons">
             <div class="col-4 game-button" data-selection="rock">
                 <i class="fa-regular fa-gem fa-2xl" id="rockIcon"></i>
             </div>
@@ -49,20 +63,30 @@
             <div class="col-4 game-button" data-selection="scissors">
                 <i class="fa-solid fa-scissors fa-2xl" id="scissorsIcon"></i>
             </div>
+        </div> -->
+        <div class="choices">
+            <div class="choiceDiv">
+                <h3 class="choiceHeading">User</h3>
+                <div class="chosen" id="userChoice"></div>
+            </div>
+            <div class="choiceDiv">
+                <h3 class="choiceHeading">Computer</h3>
+                <div class="chosen" id="computerChoice"></div>
+            </div>
         </div>
-        <div class="row choices">
-            <div class="col-6" id="userChoice"></div>
-            <div class="col-6" id="computerChoice"></div>
-        </div>
-        <div class="row results">
+        <div class="results">
+            <h3 class="resultHeading">Result</h3>
             <div class="col-12" id="resultDisplay"></div>
         </div>
-        <div class="row scores">
-            <div class="col-6" id="userScore">
-                0
-            </div>
-            <div class="col-6" id="computerScore">
-                0
+        <div class="scores">
+            <h2 class="scoresHeading">Scores</h2>
+            <div class="scoresDisplay">
+                <div class="col-6" id="userScore">
+                    0
+                </div>
+                <div class="col-6" id="computerScore">
+                    0
+                </div>
             </div>
         </div>
         <div class="modal" tabindex="-1">

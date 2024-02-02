@@ -14,10 +14,15 @@ document.getElementsByClassName('btn-close')[0].addEventListener('click', () => 
 function userTurn(choice) {
     let computer = computerTurn();
     console.log(`You chose ${choice}. Computer chose ${computer}.`)
+    document.getElementsByClassName('choices')[0].style.display='flex';
     fillResult(choice, computer);
+    if (document.getElementsByClassName('results')[0].style.display = 'none') {
+        document.getElementsByClassName('results')[0].style.display = 'flex';
+    }
     let result = turnResult(choice, computer);
     if (result === 'win') {
         let userScoreVal = Number(userScore.innerText);
+        document.getElementsByClassName('scores')[0].style.display = 'flex';
         userScoreVal++;
         userScore.innerText = userScoreVal;
         if (userScoreVal===3){
@@ -93,6 +98,9 @@ function resetGame() {
     computerScore.innerHTML = 0;
     userChoice.innerHTML = "";
     computerChoice.innerHTML = "";
+    document.getElementsByClassName('choices')[0].style.display = 'none';
+    document.getElementsByClassName('scores')[0].style.display = 'none';
+    document.getElementsByClassName('results')[0].style.display = 'none';
     closeModal();
 }
 

@@ -1,4 +1,19 @@
-rules > td {
+body {
+    font-family: 'Oswald', serif;
+    font-size: 48px;
+  }
+
+h1, h2, h3 {
+    font-family: 'Oswald', serif;
+    text-align: center;
+}
+
+.rules {
+    width: 90%;
+    margin: 0 auto;
+}
+
+td, th {
     text-align: center;
 }
 
@@ -11,12 +26,60 @@ rules > td {
     text-align: center;
 }
 
+.gameSetup {
+    padding: 10px 0;
+}
+
 .game-button {
     background-color: orange;
     border: 1px solid darkorange;
     width: 30%;
 }
 
+.choices {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.choiceDiv {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chosen {
+    height: 2em;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid red;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 .row {
     height: 20vh;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.results, .scores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hide these until required */
+.results, .scores, .choices {
+    display: none;
+}
+
+.scoresDisplay {
+    display: flex;
+    justify-content: space-evenly;
 }
