@@ -42,14 +42,23 @@ td, th {
     padding: 10px;
 }
 
-.choiceDiv {
+.scores {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.choiceDiv,
+.scoreDiv {
     width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.chosen {
+.chosen,
+.score {
     height: 2em;
     justify-content: center;
     align-content: center;
@@ -82,4 +91,8 @@ td, th {
 .scoresDisplay {
     display: flex;
     justify-content: space-evenly;
+}
+
+#resultDisplay {
+    text-align: center;
 }

@@ -32,6 +32,7 @@ function userTurn(choice) {
         }
     } else if (result === 'lose') {
         let computerScoreVal = Number(computerScore.innerText);
+        document.getElementsByClassName('scores')[0].style.display = 'flex';
         computerScoreVal++;
         computerScore.innerText = computerScoreVal;
         if (computerScoreVal===3){
